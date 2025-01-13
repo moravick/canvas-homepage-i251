@@ -1,0 +1,510 @@
+<style>
+    :root {
+        --crimson: 60, 9, 25;
+        --ash: 201, 206, 189;
+        --gray: 178, 188, 170;
+        --battleship: 131, 142, 131;
+    }
+
+
+    /* BODY */
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 20px;
+
+    }
+
+    /* TABLE STYLES (optional) */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        /* or your desired font */
+        color: #333;
+        /* default text color */
+    }
+
+    /* Table Header */
+    table th {
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(var(--crimson));
+        color: #fff;
+
+        /* Optional: a slightly thicker bottom border for emphasis */
+        border-bottom: 3px solid rgb(var(--crimson));
+
+        /* If you want rounded top corners, you could do:
+     border-radius: 8px 8px 0 0; 
+     but for a minimal style, we’ll keep them at 0. */
+        border-radius: 0;
+    }
+
+    /* Table Cells */
+    table td {
+        text-align: center;
+        padding: 10px;
+
+        /* A subtle border on each cell */
+        border: 1px solid rgba(var(--crimson), 0.4);
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .email {
+        padding-top: 10px;
+        font-weight: normal;
+        font-size: smaller;
+    }
+
+    .pronouns {
+        font-weight: light;
+        font-style: italic;
+        font-size: smaller;
+    }
+
+    .days {
+        font-weight: normal;
+        font-size: smaller;
+    }
+
+    .times {
+        color: rgba(var(--crimson));
+        font-weight: normal;
+    }
+
+    .location {
+        padding-top: 10px;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    /* CONTAINER "TILES" */
+    .button-container {
+        /* Let the container width be fluid */
+        width: 100%;
+        box-sizing: border-box;
+
+        /* Minimalistic tile styling */
+        margin: 20px 0;
+        /* top/bottom spacing */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        border: 2px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+        text-align: center;
+    }
+
+    /* Heading inside each container */
+    .button-container h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: var(--crimson);
+        font-size: 1.4rem;
+    }
+
+    /* WRAPPER FOR THE BUTTONS */
+    .buttons {
+        /* Use flex so buttons wrap on smaller screens */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* padding: 20px; */
+        gap: 20px;
+        /* spacing between buttons */
+    }
+
+    /* BUTTONS */
+    .button {
+        /* Fixed size for consistency */
+        width: 180px;
+        height: 80px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+
+        border-radius: 8px;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+
+        /* Subtle text shadow to improve contrast against backgrounds */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+
+        /* Transition for color changes */
+        transition: color 0.3s ease;
+    }
+
+    /* Hover Overlay (slight darkening) */
+    .button::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.3s ease;
+        z-index: 1;
+    }
+
+    .button:hover::after {
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .button * {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Subtitles beneath main text */
+    .subtitle {
+        font-size: 0.85rem;
+        font-weight: normal;
+        margin-top: 3px;
+        text-align: center;
+    }
+
+    /* PER-SECTION BUTTON COLORS */
+    /* Course Docs: use ash */
+    .course-docs .button {
+        background-color: rgba(var(--ash));
+        border-color: rgba(var(--ash));
+    }
+
+    /* Daily Links: use gray */
+    .daily-links .button {
+        background-color: rgba(var(--gray));
+        border-color: rgba(var(--gray));
+    }
+
+    /* Communication & Care: use battleship */
+    .communication-care .button {
+        background-color: rgba(var(--battleship));
+        border-color: rgba(var(--battleship));
+    }
+</style>
+
+<p>
+    <img role="presentation" src="/courses/2250329/files/177708149/preview" alt="" />
+</p>
+<table>
+    <tbody>
+        <tr>
+            <th>Class Meetings</th>
+            <th>Instructor Info</th>
+            <th>Office Hours</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="days">
+                    Tues / Thurs
+                </div>
+                <div class="times">
+                    3:55 - 5:10pm
+                </div>
+                <div class="location">
+                    ED 2271
+                </div>
+            </td>
+            <td>
+                <div class="name">
+                    Morgan Vickery
+                </div>
+                <div class="pronouns">
+                    (she/her)
+                </div>
+                <div class="email">moravick@iu.edu</div>
+                </i>
+            </td>
+            <td>
+                <div class="days">
+                    Tues / Thurs
+                </div>
+                <div class="times">
+                    2:00 - 4:00pm
+                </div>
+                <div class="location">
+                    Room 2026
+                </div>
+                </i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- COURSE DOCS CONTAINER -->
+<div class="button-container course-docs">
+    <h2>Course Documents</h2>
+    <div class="buttons">
+        <a class="button" href="https://docs.google.com/document/d/1QCDepOYB7fOFrFucjZ_lV5OK_ZkRuY2q/edit"
+            target="_blank" rel="noreferrer noopener">
+            Syllabus
+        </a>
+        <a class="button" href="https://docs.google.com/document/d/1mnF9mC1kh0FxTByD8DvwzbybCj3SuYnI/edit"
+            target="_blank" rel="noreferrer noopener">
+            <span class="subtitle">Course</span>Schedule
+        </a>
+        <a class="button" href="https://docs.google.com/presentation/d/19u6it33YEOd8CIguILnHimAxoLFFeffa/edit"
+            target="_blank" rel="noreferrer noopener">
+            Reading Guide
+            <span class="subtitle">Template</span>
+        </a>
+    </div>
+</div>
+
+<!-- DAILY LINKS CONTAINER -->
+<div class="button-container daily-links">
+    <h2>Daily Links</h2>
+    <div class="buttons">
+        <a class="button" href="http://PollEv.com/morganv008" target="_blank" rel="noreferrer noopener">
+            PollEverywhere
+            <span class="subtitle">(for attendance)</span>
+        </a>
+        <a class="button" href="https://whimsical.com/f24-theory-mapping-47naYPyThESxwFScQ1k63y" target="_blank"
+            rel="noreferrer noopener">
+            Theory Map
+            <span class="subtitle">Whimsical</span>
+        </a>
+        <a class="button" href="https://drive.google.com/drive/folders/1W69g9-AdQp-G3gTJpFo6p-nOBo38C99M"
+            target="_blank" rel="noreferrer noopener">
+            Slide Decks
+            <span class="subtitle">GDrive</span>
+        </a>
+    </div>
+</div>
+
+<!-- COMMUNICATION & CARE CONTAINER -->
+<div class="button-container communication-care">
+    <h2>Communication &amp; Care</h2>
+    <div class="buttons">
+        <a class="button" href="https://iu.zoom.us/my/moravick" target="_blank" rel="noreferrer noopener">
+            <span class="subtitle">Morgan's</span>
+            Zoom Room
+        </a>
+        <a class="button" href="https://forms.gle/Wj4U7aNubpidgMgc8" target="_blank" rel="noreferrer noopener">
+            <span class="subtitle">Anonymous</span>
+            Feedback Form
+        </a>
+        <a class="button" href="https://forms.gle/____" target="_blank" rel="noreferrer noopener">
+            Attendance
+            <span class="subtitle">Request</span>
+        </a>
+        <a class="button" href="https://forms.gle/____" target="_blank" rel="noreferrer noopener">
+            Extension <span class="subtitle">Request</span>
+        </a>
+        <a class="button" href="https://docs.google.com/presentation/d/19u6it33YEOd8CIguILnHimAxoLFFeffa/edit"
+            target="_blank" rel="noreferrer noopener">
+            <span class="subtitle">Resources for</span> Being a Human
+        </a>
+    </div>
+</div>
+
+<style>
+    /* Container that holds the overview content */
+    .course-overview {
+        max-width: 800px;
+        /* limit width for nicer readability */
+        margin: 40px auto;
+        /* center horizontally with some vertical spacing */
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        color: #333;
+        /* default text color */
+        line-height: 1.6;
+        /* a bit more line spacing for readability */
+    }
+
+    /* Main Title */
+    .course-overview h1 {
+        margin-top: 0;
+        font-size: 2rem;
+        font-weight: normal;
+    }
+
+    /* Sub-Title (e.g., “A Note from Morgan”) */
+    .course-overview h4 {
+        font-size: 1.25rem;
+        margin-top: 2em;
+        /* special color for Morgan’s note headings */
+    }
+
+    /* Horizontal Rule */
+    .course-overview hr {
+        margin: 1.5em 0;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Paragraphs */
+    .course-overview p {
+        margin: 1em 0;
+    }
+
+    /* Unordered lists */
+    .course-overview ul {
+        margin: 1em 0 1em 2em;
+        /* indent lists slightly */
+        list-style: disc;
+    }
+
+    /* Make sure list items have some spacing */
+    .course-overview li {
+        margin-bottom: 0.5em;
+    }
+
+    /* Emphasized text for Morgan’s note (optional) */
+    .subheading {
+        font-weight: 600;
+        margin-left: 1em;
+    }
+
+    .morgans-note .text {
+        margin-left: 2em;
+        font-weight: lighter;
+        gap: 10px;
+    }
+
+    .morgans-note {
+        padding: 20px;
+        background-color: rgba(var(--ash), 0.2);
+        color: rgba(var(--crimson));
+        border-radius: 40px;
+        border: 2px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .morgans-note h2 {
+        font-size: larger;
+    }
+</style>
+
+<!-- MINIMAL, CLEAN HTML ------------------------------------------- -->
+<div class="course-overview">
+    <h1>Course Overview</h1>
+
+    <p>
+        This course is designed for you to understand the foundations of educational and learning theories with respect
+        to:
+    </p>
+
+    <ul>
+        <li>What do the major theoretical perspectives say about the nature of learning, knowledge, and teaching?</li>
+        <li>How can each of these theoretical perspectives be applied to the design and facilitation of classroom
+            learning?</li>
+    </ul>
+
+    <p>
+        Learning theories exist to help us understand different explanations behind the mechanisms, forces, and
+        processes behind learning. These theories often conflict or ‘branch off’ from one another; they come from
+        different lineages of philosophy. Thus, <em>there is no single “correct” theory</em>. Our job as educators is to
+        grasp the fundamentals of these theories so that we can identify how and when to apply them to best suit our
+        students’ learning and our instructional needs.
+    </p>
+
+    <div class="morgans-note">
+        <h1>A Note from Morgan</h4>
+
+            <div class="note-section">
+                <h2>I consider it a privilege to be teaching &amp; learning <em>with</em> you all</h2>
+                <div class="text">
+                    <p>
+                        This space should be humanizing, dignity-affirming, and psychologically safe for you to ‘try on
+                        different theoretical hats’ and explore your identity as an educator.
+                    </p>
+                    <p>
+                        If this is ever not the case, please tell me.
+                    </p>
+                </div>
+            </div>
+
+            <div class="note-section">
+                <h2>It is no small task to be responsible for the education of other people’s children</h2>
+                <div class="text">
+                    I acknowledge that I am not exempt from this responsibility. I do not take this task of teaching you
+                    all
+                    lightly and will strive to <em>show up</em> for you all as best I can.
+                </div>
+            </div>
+
+            <div class="note-section">
+                <h2>I ask that you "show up" to the best of your ability</h2>
+                <div class="text">
+                    <p>
+                        I am forgiving when it comes to attendance especially when (psychological & physical) health,
+                        wellbeing, and family are involved.
+                    <p>
+                        Life is going to happen, and your ability to "show up" each day will change.
+                    <ul>
+                        <li>Some days, this may look being <em>loud</em> & <em>visible</em>!</li>
+                        <li>Other days, this may look like just being physically present.</li>
+                        <li>Other days, you may only be able to send an email.</li>
+                    </ul>
+
+                    </p>
+                    </p>
+                    <p>
+                        I trust you, and I trust that you will act in your own best interest until/unless you give me
+                        reason
+                        not
+                        to. I ask that you do not voilate this trust.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="note-section">
+                <h2>Writing about and engaging with theories is HARD</h2>
+                <div class="text">
+                    <p>
+                        Theory is hard to make sense of in isolation; historically,
+                        students who have not shown up have not performed well in class.
+                    </p>
+                    <p> I do not expect you to get everything right all of the time, nor do I expect this content to be
+                        a ‘breeze.’ I want you to succeed. I want us to succeed. And in order to make this happen, it's
+                        going to require all of us to show up and be present in whatever capacity we are willing and
+                        able.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="note-section">
+                <h2>Communicate with me</h2>
+
+                <div class="text">
+                   <p> Life is also inevitably going to happen. When it does, communicate with me so that it does not come
+                    at
+                    the cost of your learning, well-being, or grade. I am on your team, and will have your back...but I
+                    
+                    can’t do that if you don’t communicate with me.
+                   <p>Complete ‘radio silence’ will hurt your grade.</p> 
+                </div>
+            </div>
+
+
+            <div class="note-section">
+                <h2>Help me build & maintain this community</h2>
+
+                <div class="text">
+                    <p> This means welcoming and valuing what we each bring to the table, including our
+                        races, ethnicities and cultures, family-and-language-and-land histories, desired futures, our
+                        joys,
+                        and challenges, who we love, and how we want to grow.
+                    </p>
+                    <p>Having your
+                        worldviews challenged or contradicted is HARD. I implore you to keep an open mind and put the
+                        dignity and humanity of this classroom community, your students, and your colleagues first.
+                    </p>
+                </div>
+            </div>
+
+
+    </div>
+</div>
