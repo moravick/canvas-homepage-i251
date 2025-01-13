@@ -1,9 +1,9 @@
 <style>
     :root {
-        --crimson: 60, 9, 25;
-        --ash: 201, 206, 189;
-        --gray: 178, 188, 170;
-        --battleship: 131, 142, 131;
+        --licorice: 31, 19, 0;
+        --mustard: 224, 159, 62;
+        --auburn: 158, 42, 43;
+        --slate: 51, 92, 103;
     }
 
 
@@ -29,11 +29,11 @@
     table th {
         text-align: center;
         padding: 10px;
-        background-color: rgb(var(--crimson));
+        background-color: rgb(var(--licorice));
         color: #fff;
 
         /* Optional: a slightly thicker bottom border for emphasis */
-        border-bottom: 3px solid rgb(var(--crimson));
+        border-bottom: 3px solid rgb(var(--licorice));
 
         /* If you want rounded top corners, you could do:
      border-radius: 8px 8px 0 0; 
@@ -47,7 +47,7 @@
         padding: 10px;
 
         /* A subtle border on each cell */
-        border: 1px solid rgba(var(--crimson), 0.4);
+        border: 1px solid rgba(var(--licorice), 0.4);
     }
 
     .name {
@@ -72,7 +72,7 @@
     }
 
     .times {
-        color: rgba(var(--crimson));
+        color: rgba(var(--licorice));
         font-weight: normal;
     }
 
@@ -104,7 +104,7 @@
     .button-container h2 {
         margin-top: 0;
         margin-bottom: 20px;
-        color: var(--crimson);
+        color: var(--licorice);
         font-size: 1.4rem;
     }
 
@@ -122,16 +122,14 @@
     /* BUTTONS */
     .button {
         /* Fixed size for consistency */
-        width: 180px;
-        height: 80px;
-
+        width: 200px;
+        height: 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         color: #fff;
-
         border-radius: 8px;
         border: 2px solid transparent;
         position: relative;
@@ -173,22 +171,22 @@
     }
 
     /* PER-SECTION BUTTON COLORS */
-    /* Course Docs: use ash */
+    /* Course Docs: use mustard */
     .course-docs .button {
-        background-color: rgba(var(--ash));
-        border-color: rgba(var(--ash));
+        background-color: rgba(var(--mustard));
+        border-color: rgba(var(--mustard));
     }
 
-    /* Daily Links: use gray */
+    /* Daily Links: use auburn */
     .daily-links .button {
-        background-color: rgba(var(--gray));
-        border-color: rgba(var(--gray));
+        background-color: rgba(var(--auburn));
+        border-color: rgba(var(--auburn));
     }
 
-    /* Communication & Care: use battleship */
+    /* Communication & Care: use slate */
     .communication-care .button {
-        background-color: rgba(var(--battleship));
-        border-color: rgba(var(--battleship));
+        background-color: rgba(var(--slate));
+        border-color: rgba(var(--slate));
     }
 </style>
 
@@ -373,8 +371,8 @@
 
     .morgans-note {
         padding: 20px;
-        background-color: rgba(var(--ash), 0.2);
-        color: rgba(var(--crimson));
+        background-color: rgba(var(--licorice), 0.2);
+        color: rgba(var(--licorice));
         border-radius: 40px;
         border: 2px solid #ddd;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
