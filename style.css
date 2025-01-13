@@ -242,4 +242,6 @@ table td {
 
 .image-container img {
     width: 100%;
+    max-height: fit-content;
+    max-width: fit-content;
 }
