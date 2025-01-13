@@ -150,6 +150,7 @@ table td {
     font-weight: normal;
     margin-top: 3px;
     text-align: center;
+    z-index: 0;
 }
 
 /* PER-SECTION BUTTON COLORS */
