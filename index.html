@@ -180,17 +180,35 @@
         border-color: rgba(var(--slate));
     }
 
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+    <style>
+  /* Container for the Header */
+  .site-header {
+    width: 100%;
+    overflow: hidden; /* Prevents any overflow if the image exceeds container dimensions */
+    text-align: center; /* Centers the image horizontally */
+    margin-bottom: 20px; /* Optional: Adds space below the header */
+  }
+
+  /* Responsive Header Image */
+  .header-image {
+    width: 100%;        /* Makes the image stretch across the full width of the container */
+    height: auto;       /* Maintains the aspect ratio */
+    display: block;     /* Removes any small gaps below the image */
+  }
+
 </style>
 
-<header>
-    <img src="hero.png" alt="" data-aos="fade-in">
-</header>
+</style>
 
+
+<!-- Responsive Header Image -->
+<header class="site-header">
+    <img
+      src="hero.png"
+      alt="Course Header"
+      class="header-image">
+  </header>
+  
 <body>
     <table>
         <tbody>
