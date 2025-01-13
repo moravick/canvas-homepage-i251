@@ -247,7 +247,7 @@ table td {
 
 .image-container img {
     width: inherit;
-    height: auto;
+    height: inherit;
     object-fit: cover;
     overflow: hidden;
 }
