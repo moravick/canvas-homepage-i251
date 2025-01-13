@@ -19,6 +19,7 @@ table {
     /* or your desired font */
     color: #333;
     /* default text color */
+    flex-wrap: wrap;
 }
 
 /* Table Header */
@@ -227,6 +228,7 @@ table td {
 }
 
 .morgans-note {
+    margin-top: 40px;
     padding: 30px;
     line-height: normal;
     background-color: rgba(var(--mustard), 0.1);
@@ -240,13 +242,13 @@ table td {
     font-size: larger;
 }
 
-.image-container{
+.image-container {
+    height: auto;
     width: 100%;
-    max-height: 500px;
 }
 
 .image-container img {
+    object-fit:scale-down;
     width: inherit;
-    object-fit: cover;
-    overflow: hidden;
+    object-position: center;
 }
